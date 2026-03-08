@@ -912,6 +912,7 @@ components:
         - lastName
         - document
         - phone
+        - email
         - address
       properties:
         firstName:
@@ -929,6 +930,10 @@ components:
         phone:
           type: string
           example: "5511912341234"
+          nullable: false
+        email:
+          type: string
+          example: "johndoe@email.com"
           nullable: false
         address: 
           $ref: "#/components/schemas/Address"
@@ -979,9 +984,6 @@ components:
         phone:
           type: string
           example: "1191234564"
-        archived:
-          type: boolean
-          example: false
     OrderStatus:
       type: string
       example: "PLACED"
